@@ -1,6 +1,6 @@
 ## Market Methods
 
-### CobinhoodRx.Market.getCurrencies()
+### Wedex.Market.getCurrencies()
 
 Get all the market currencies.
 
@@ -17,7 +17,7 @@ Get all the market currencies.
 #### Example
 
 ```js
-cobinhoodRx.Market.getCurrencies()
+wedex.Market.getCurrencies()
 	.subscribe(
 		console.log(data);
 	});
@@ -25,7 +25,7 @@ cobinhoodRx.Market.getCurrencies()
 
 
 
-### CobinhoodRx.Market.getTradingPairs()
+### Wedex.Market.getTradingPairs()
 
 Get the data of all trading pairs.
 
@@ -42,7 +42,7 @@ Get the data of all trading pairs.
 #### Example
 
 ```js
-cobinhoodRx.Market.getTradingPairs()
+wedex.Market.getTradingPairs()
 	.subscribe(
 		console.log(data);
 	});
@@ -50,7 +50,7 @@ cobinhoodRx.Market.getTradingPairs()
 
 
 
-### CobinhoodRx.Market.getOrderBook(...params)
+### Wedex.Market.getOrderBook(...params)
 
 Get both bid and ask orders from the order book for a specific market.
 
@@ -68,7 +68,7 @@ Get both bid and ask orders from the order book for a specific market.
 #### Example
 
 ```js
-cobinhoodRx.Market.getCurrencies.getOrderBook('BTC-USDT', 10)
+wedex.Market.getCurrencies.getOrderBook('BTC-USDT', 10)
 	.subscribe(
 		console.log(data);
 	});
@@ -76,7 +76,7 @@ cobinhoodRx.Market.getCurrencies.getOrderBook('BTC-USDT', 10)
 
 
 
-### CobinhoodRx.Market.getMarketStats()
+### Wedex.Market.getMarketStats()
 
 Get a snapshot of all market stats.
 
@@ -93,7 +93,7 @@ Get a snapshot of all market stats.
 #### Example
 
 ```js
-cobinhoodRx.Market.getMarketStats()
+wedex.Market.getMarketStats()
 	.subscribe(
 		console.log(data);
 	});
@@ -101,7 +101,7 @@ cobinhoodRx.Market.getMarketStats()
 
 
 
-### CobinhoodRx.Market.getTicker(param)
+### Wedex.Market.getTicker(param)
 
 Get the tick data for the market specified.
 
@@ -118,7 +118,7 @@ Get the tick data for the market specified.
 #### Example
 
 ```js
-cobinhoodRx.Market.getTicker('BTC-USDT')
+wedex.Market.getTicker('BTC-USDT')
 	.subscribe(
 		console.log(data);
 	});
@@ -126,7 +126,7 @@ cobinhoodRx.Market.getTicker('BTC-USDT')
 
 
 
-### CobinhoodRx.Market.getRecentTrades(...params)
+### Wedex.Market.getRecentTrades(...params)
 
 Get the most recent trade for the market specified.
 
@@ -144,7 +144,7 @@ Get the most recent trade for the market specified.
 #### Example
 
 ```js
-cobinhoodRx.Market.getRecentTrades('BTC-USDT', 10)
+wedex.Market.getRecentTrades('BTC-USDT', 10)
 	.subscribe(
 		console.log(data);
 	});

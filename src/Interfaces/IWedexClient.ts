@@ -5,12 +5,12 @@ import { TradeAPI } from '../Core/API/TradeAPI';
 import { WalletAPI } from '../Core/API/WalletAPI';
 import { RequestAPI } from '../Core/API/RequestAPI';
 
-export interface ICobinhoodRxClient {
+export interface IWedexClient {
 	/**
 	 * Access all System API methods.
 	 *
 	 * @type {SystemAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly System: SystemAPI;
 
@@ -18,7 +18,7 @@ export interface ICobinhoodRxClient {
 	 * Access all Market API methods.
 	 *
 	 * @type {MarketAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly Market: MarketAPI;
 
@@ -26,7 +26,7 @@ export interface ICobinhoodRxClient {
 	 * Access all Chart API methods.
 	 *
 	 * @type {ChartAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly Chart: ChartAPI;
 
@@ -34,7 +34,7 @@ export interface ICobinhoodRxClient {
 	 * Access all Trade API methods.
 	 *
 	 * @type {TradeAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly Trade: TradeAPI;
 
@@ -42,7 +42,7 @@ export interface ICobinhoodRxClient {
 	 * Access all Wallet API methods.
 	 *
 	 * @type {WalletAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly Wallet: WalletAPI;
 
@@ -50,7 +50,7 @@ export interface ICobinhoodRxClient {
 	 * Access all Request API methods.
 	 *
 	 * @type {RequestAPI}
-	 * @memberof ICobinhoodRxClient
+	 * @memberof IWedexClient
 	 */
 	readonly Request: RequestAPI;
 }

@@ -1,12 +1,12 @@
-import { CobinhoodRxClient } from '../../../Core/CobinhoodRxClient';
+import { WedexClient } from '../../../Core/WedexClient';
 import { BigNumber } from 'bignumber.js';
 import { LogTypeValue } from '../../../Enum';
 
 describe('Market Methods', () => {
-	let cbrx: CobinhoodRxClient;
+	let cbrx: WedexClient;
 
 	beforeAll(() => {
-		cbrx = new CobinhoodRxClient(
+		cbrx = new WedexClient(
 			{
 				logType: LogTypeValue.None
 			}

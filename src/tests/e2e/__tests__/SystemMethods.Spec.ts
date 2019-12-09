@@ -1,11 +1,11 @@
-import { CobinhoodRxClient } from '../../../Core/CobinhoodRxClient';
+import { WedexClient } from '../../../Core/WedexClient';
 import { LogTypeValue } from '../../../Enum';
 
 describe('System Methods', () => {
-	let cbrx: CobinhoodRxClient;
+	let cbrx: WedexClient;
 
 	beforeAll(() => {
-		cbrx = new CobinhoodRxClient(
+		cbrx = new WedexClient(
 			{
 				logType: LogTypeValue.None
 			}

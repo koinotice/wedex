@@ -17,7 +17,7 @@ This method is not dependent on the API version and allows for the sending of cu
 
 #### Example
 ```js
-cobinhoodRx.Request.custom(
+wedex.Request.custom(
 	'https://api.cobinhood.com/v1/market/trades/BTC-USDT', 
 	{ limit: 30 },
     false

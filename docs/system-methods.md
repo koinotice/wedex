@@ -1,6 +1,6 @@
 ## System Methods
 
-### CobinhoodRx.System.getSystemTime()
+### Wedex.System.getSystemTime()
 
 Get system time as Unix timestamp.
 
@@ -16,7 +16,7 @@ Get system time as Unix timestamp.
 
 #### Example
 ```js
-cobinhoodRx.Trade.
+wedex.Trade.
 	.subscribe(
 		console.log(data);
 	});
@@ -24,7 +24,7 @@ cobinhoodRx.Trade.
 
 
 
-### CobinhoodRx.System.getSystemInfo()
+### Wedex.System.getSystemInfo()
 
 Get system info.
 
@@ -40,7 +40,7 @@ Get system info.
 
 #### Example
 ```js
-cobinhoodRx.System.getSystemInfo()
+wedex.System.getSystemInfo()
     .subscribe(
         console.log(data);
     });

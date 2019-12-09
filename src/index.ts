@@ -1,4 +1,4 @@
-export { CobinhoodRxClient } from './Core/CobinhoodRxClient';
+export { WedexClient } from './Core/WedexClient';
 export {
 	LedgerTypeValue,
 	WithdrawalStatusValue,

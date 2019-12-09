@@ -1,6 +1,6 @@
 ## Trade Methods
 
-### CobinhoodRx.Trade.getOrder(param)
+### Wedex.Trade.getOrder(param)
 
 Get the data for the order specified.
 
@@ -17,7 +17,7 @@ Get the data for the order specified.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getOrder('0941ef71-effa-425c-a390-0dc837119aca')
+wedex.Trade.getOrder('0941ef71-effa-425c-a390-0dc837119aca')
 	.subscribe(
 		console.log(data);
 	});
@@ -25,7 +25,7 @@ cobinhoodRx.Trade.getOrder('0941ef71-effa-425c-a390-0dc837119aca')
 
 
 
-### CobinhoodRx.Trade.getOrderTrades(param)
+### Wedex.Trade.getOrderTrades(param)
 
 Get all the trades for the order specified.
 
@@ -42,7 +42,7 @@ Get all the trades for the order specified.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getOrderTrade('07797042-7f4b-4d09-8c25-e55fa2f80adx')
+wedex.Trade.getOrderTrade('07797042-7f4b-4d09-8c25-e55fa2f80adx')
 	.subscribe(
 		console.log(data);
 	});
@@ -50,7 +50,7 @@ cobinhoodRx.Trade.getOrderTrade('07797042-7f4b-4d09-8c25-e55fa2f80adx')
 
 
 
-### CobinhoodRx.Trade.getAllOrder(...params)
+### Wedex.Trade.getAllOrder(...params)
 
 Get all open trades.
 
@@ -68,7 +68,7 @@ Get all open trades.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getAllOrder()
+wedex.Trade.getAllOrder()
 	.subscribe(
 		console.log(data);
 	});
@@ -76,7 +76,7 @@ cobinhoodRx.Trade.getAllOrder()
 
 
 
-### CobinhoodRx.Trade.placeBuyOrder(...params)
+### Wedex.Trade.placeBuyOrder(...params)
 
 Place a buy order.
 
@@ -96,7 +96,7 @@ Place a buy order.
 #### Example
 
 ```js
-cobinhoodRx.Trade.placeBuyOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280)
+wedex.Trade.placeBuyOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280)
 	.subscribe(
 		console.log(data);
 	});
@@ -104,7 +104,7 @@ cobinhoodRx.Trade.placeBuyOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280)
 
 
 
-### CobinhoodRx.Trade.placeSellOrder(...params)
+### Wedex.Trade.placeSellOrder(...params)
 
 Place a sell order.
 
@@ -124,7 +124,7 @@ Place a sell order.
 #### Example
 
 ```js
-cobinhoodRx.Trade.placeSellOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280)
+wedex.Trade.placeSellOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280)
 	.subscribe(
 		console.log(data);
 	});
@@ -132,7 +132,7 @@ cobinhoodRx.Trade.placeSellOrder('SNT-ETH', OrderTypeValue.Limit, 0.0000119, 280
 
 
 
-### CobinhoodRx.Trade.modifyOrder(...params)
+### Wedex.Trade.modifyOrder(...params)
 
 Modify an existing order specified.
 
@@ -151,7 +151,7 @@ Modify an existing order specified.
 #### Example
 
 ```js
-cobinhoodRx.Trade.modifyOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110, 300)
+wedex.Trade.modifyOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110, 300)
 	.subscribe(
 		console.log(data);
 	});
@@ -159,7 +159,7 @@ cobinhoodRx.Trade.modifyOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110,
 
 
 
-### CobinhoodRx.Trade.cancelOrder(param)
+### Wedex.Trade.cancelOrder(param)
 
 Cancel an existing order specified.
 
@@ -176,7 +176,7 @@ Cancel an existing order specified.
 #### Example
 
 ```js
-cobinhoodRx.Trade.cancelOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110, 300)
+wedex.Trade.cancelOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110, 300)
 	.subscribe(
 		console.log(data);
 	});
@@ -184,7 +184,7 @@ cobinhoodRx.Trade.cancelOrder('0941ef71-effa-425c-a390-0dc837119aca', 0.0000110,
 
 
 
-### CobinhoodRx.Trade.getOrderHistory(...params)
+### Wedex.Trade.getOrderHistory(...params)
 
 Get the order history data.
 
@@ -202,7 +202,7 @@ Get the order history data.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getOrderHistory('SNT-ETH')
+wedex.Trade.getOrderHistory('SNT-ETH')
 	.subscribe(
 		console.log(data);
 	});
@@ -210,7 +210,7 @@ cobinhoodRx.Trade.getOrderHistory('SNT-ETH')
 
 
 
-### CobinhoodRx.Trade.getTrade(param)
+### Wedex.Trade.getTrade(param)
 
 Get the trade data of a specific for the account.
 
@@ -227,7 +227,7 @@ Get the trade data of a specific for the account.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getTrade('ecb560bc-a4cc-4366-88c8-cb12ebbd7b23')
+wedex.Trade.getTrade('ecb560bc-a4cc-4366-88c8-cb12ebbd7b23')
 	.subscribe(
 		console.log(data);
 	});
@@ -235,7 +235,7 @@ cobinhoodRx.Trade.getTrade('ecb560bc-a4cc-4366-88c8-cb12ebbd7b23')
 
 
 
-### CobinhoodRx.Trade.getTradeHistory(...params)
+### Wedex.Trade.getTradeHistory(...params)
 
 Get the historical trade data of a specific for the account.
 
@@ -253,7 +253,7 @@ Get the historical trade data of a specific for the account.
 #### Example
 
 ```js
-cobinhoodRx.Trade.getTradeHistory('SNT-ETH')
+wedex.Trade.getTradeHistory('SNT-ETH')
 	.subscribe(
 		console.log(data);
 	});

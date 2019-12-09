@@ -1,6 +1,6 @@
 ## Wallet Methods
 
-### CobinhoodRx.Wallet.getWalletBalances()
+### Wedex.Wallet.getWalletBalances()
 
 Get all current balances.
 
@@ -17,7 +17,7 @@ Get all current balances.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getWalletBalances()
+wedex.Wallet.getWalletBalances()
 	.subscribe(
 		console.log(data);
 	});
@@ -25,7 +25,7 @@ cobinhoodRx.Wallet.getWalletBalances()
 
 
 
-### CobinhoodRx.Wallet.getLedger(...params)
+### Wedex.Wallet.getLedger(...params)
 
 Get all transaction history.
 
@@ -43,7 +43,7 @@ Get all transaction history.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getLedger('BTC', 10)
+wedex.Wallet.getLedger('BTC', 10)
 	.subscribe(
 		console.log(data);
 	});
@@ -51,7 +51,7 @@ cobinhoodRx.Wallet.getLedger('BTC', 10)
 
 
 
-### CobinhoodRx.Wallet.getDepositAddresses(param)
+### Wedex.Wallet.getDepositAddresses(param)
 
 Get all deposit addresses.
 
@@ -68,7 +68,7 @@ Get all deposit addresses.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getDepositAddresses('BTC')
+wedex.Wallet.getDepositAddresses('BTC')
 	.subscribe(
 		console.log(data);
 	});
@@ -76,7 +76,7 @@ cobinhoodRx.Wallet.getDepositAddresses('BTC')
 
 
 
-### CobinhoodRx.Wallet.getWithdrawalAddresses(param)
+### Wedex.Wallet.getWithdrawalAddresses(param)
 
 Get all withdrawal addresses.
 
@@ -93,7 +93,7 @@ Get all withdrawal addresses.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getWithdrawalAddresses('BTC')
+wedex.Wallet.getWithdrawalAddresses('BTC')
 	.subscribe(
 		console.log(data);
 	});
@@ -101,7 +101,7 @@ cobinhoodRx.Wallet.getWithdrawalAddresses('BTC')
 
 
 
-### CobinhoodRx.Wallet.getDeposit(param)
+### Wedex.Wallet.getDeposit(param)
 
 Get the deposit data for an id specified.
 
@@ -118,7 +118,7 @@ Get the deposit data for an id specified.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getDeposit('2600c655-31e5-47e2-ade3-10593ea45991')
+wedex.Wallet.getDeposit('2600c655-31e5-47e2-ade3-10593ea45991')
 	.subscribe(
 		console.log(data);
 	});
@@ -126,7 +126,7 @@ cobinhoodRx.Wallet.getDeposit('2600c655-31e5-47e2-ade3-10593ea45991')
 
 
 
-### CobinhoodRx.Wallet.getAllDeposits()
+### Wedex.Wallet.getAllDeposits()
 
 Get all deposit data.
 
@@ -143,7 +143,7 @@ Get all deposit data.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getAllDeposits(currency?: string, status?: string, limit?: string)
+wedex.Wallet.getAllDeposits(currency?: string, status?: string, limit?: string)
 	.subscribe(
 		console.log(data);
 	});
@@ -151,7 +151,7 @@ cobinhoodRx.Wallet.getAllDeposits(currency?: string, status?: string, limit?: st
 
 
 
-### CobinhoodRx.Wallet.getWithdrawal(param)
+### Wedex.Wallet.getWithdrawal(param)
 
 Get the withdrawal data for an id specified.
 
@@ -168,7 +168,7 @@ Get the withdrawal data for an id specified.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getWithdrawal('f7e9f50c-563c-4caa-9054-386bafb60c40')
+wedex.Wallet.getWithdrawal('f7e9f50c-563c-4caa-9054-386bafb60c40')
 	.subscribe(
 		console.log(data);
 	});
@@ -176,7 +176,7 @@ cobinhoodRx.Wallet.getWithdrawal('f7e9f50c-563c-4caa-9054-386bafb60c40')
 
 
 
-### CobinhoodRx.Wallet.getAllWithdrawals(...params)
+### Wedex.Wallet.getAllWithdrawals(...params)
 
 Get all withdrawals data.
 
@@ -195,7 +195,7 @@ Get all withdrawals data.
 #### Example
 
 ```js
-cobinhoodRx.Wallet.getAllWithdrawals('ETH', status?: string, limit?: string)
+wedex.Wallet.getAllWithdrawals('ETH', status?: string, limit?: string)
 	.subscribe(
 		console.log(data);
 	});

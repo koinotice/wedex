@@ -1,6 +1,6 @@
 import { LogTypeValue } from '../Enum';
 
-export class CobinhoodRxSettings {
+export class WedexSettings {
 	public account?: any;
 
 	public logType?: LogTypeValue;

@@ -1,14 +1,14 @@
-import { CobinhoodRxClient } from '../../../Core/CobinhoodRxClient';
+import { WedexClient } from '../../../Core/WedexClient';
 import { BigNumber } from 'bignumber.js';
 import { TimeframeValue } from '../../../Enum';
 import { LogTypeValue, HttpMethod } from '../../../Enum';
 import { ApiCredentialsSettings } from '../../../Helpers/ApiCredentialsSettings';
 
 describe('Request Method', () => {
-	let cbrx: CobinhoodRxClient;
+	let cbrx: WedexClient;
 
 	beforeAll(() => {
-		cbrx = new CobinhoodRxClient(
+		cbrx = new WedexClient(
 			{
 				token: ApiCredentialsSettings.Token,
 				logType: LogTypeValue.None

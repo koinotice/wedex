@@ -1,13 +1,13 @@
-import { CobinhoodRxClient } from '../../../Core/CobinhoodRxClient';
+import { WedexClient } from '../../../Core/WedexClient';
 import { BigNumber } from 'bignumber.js';
 import { TimeframeValue } from '../../../Enum';
 import { LogTypeValue } from '../../../Enum';
 
 describe('Chart Methods', () => {
-	let cbrx: CobinhoodRxClient;
+	let cbrx: WedexClient;
 
 	beforeAll(() => {
-		cbrx = new CobinhoodRxClient(
+		cbrx = new WedexClient(
 			{
 				logType: LogTypeValue.None
 			}

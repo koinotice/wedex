@@ -1,6 +1,6 @@
 ## Chart Methods
 
-#### CobinhoodRx.Chart.getCandles(...params)
+#### Wedex.Chart.getCandles(...params)
 
 Get candle data for the market specified.
 
@@ -20,7 +20,7 @@ Get candle data for the market specified.
 #### Example
 
 ```js
-cobinhoodRx.Chart.getCandles('BTC-USDT', TimeframeValue.SixHour, new Date('2018-02-02'))
+wedex.Chart.getCandles('BTC-USDT', TimeframeValue.SixHour, new Date('2018-02-02'))
 	.subscribe(
 		console.log(data);
 	});
