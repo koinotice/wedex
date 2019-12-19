@@ -56,12 +56,12 @@ export class TransportManager {
 		let opts = Object.assign({}, this.transportOptions);
 		opts.method = httpMethod;
 
-		let requestObject =  requestOptions;
+		let requestObject = requestOptions;
 
 		requestObject = Utilities.removeUndefined({
 			...requestOptions,
 		});
-		requestObject=Object.assign({accountId: this.config.account.accountId}, requestObject)
+		requestObject = Object.assign({accountId: this.config.account.accountId}, requestObject)
 
 		if (httpMethod === HttpMethod.POST || httpMethod === HttpMethod.PUT || httpMethod === HttpMethod.DELETE) {
 			const body = requestObject;
@@ -95,22 +95,29 @@ export class TransportManager {
 		if (res.error) {
 			throw res.error;
 		}
+		//console.log(res)
+		if (res.resultInfo) {
 
-		if (res.resultInfo.code == 0) {
-			let result = (dataKey) ? res[dataKey] : res;
-			result = (result) ? result : res;
+			if (res.resultInfo.code == 0) {
+				let result = (dataKey) ? res[dataKey] : res;
+				result = (result) ? result : res;
 
-			if (res === null) {
-				return res;
-			}
-			if (classType) {
-				// return result;
-				return this.jsc.deserialize(result, classType);
-			} else if (!classType) {
-				return result;
+				if (res === null) {
+					return res;
+				}
+				if (classType) {
+					// return result;
+					return this.jsc.deserialize(result, classType);
+				} else if (!classType) {
+					return result;
+				}
+			} else {
+				throw res.resultInfo.message;
 			}
 		} else {
-			throw res.resultInfo.message;
+			throw res;
 		}
+
+
 	}
 }

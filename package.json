@@ -1,6 +1,6 @@
 {
 	"name": "wedex",
-	"version": "0.1.4",
+	"version": "1.0.4",
 	"description": "Wedex is a rxjs node wrapper for the Wedex Api.",
 	"scripts": {
 		"build": "tsc",

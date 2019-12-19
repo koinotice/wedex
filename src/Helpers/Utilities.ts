@@ -1,3 +1,4 @@
+import queryString from 'qs';
 export class Utilities {
 	public static removeUndefined(obj: any) {
 		const res: object = (Object).assign({}, obj);
@@ -11,18 +12,18 @@ export class Utilities {
 	}
 
 	public static generateQuerySting(queryObject: object) {
-		const keys = Object.keys(queryObject);
-		if (keys.length === 0) {
-			return '';
-		}
-		const builder: string[] = [];
-		for (const key of keys) {
-			if (queryObject.hasOwnProperty(key) && !Utilities.isObjectEmpty(queryObject[key])) {
-				builder.push(`${key}=${queryObject[key]}`);
-			}
-		}
-
-		const qString = `?${encodeURI(builder.join('&'))}`;
+		// const keys = Object.keys(queryObject);
+		// if (keys.length === 0) {
+		// 	return '';
+		// }
+		// const builder: string[] = [];queryObject
+		// for (const key of keys) {
+		// 	if (queryObject.hasOwnProperty(key) && !Utilities.isObjectEmpty(queryObject[key])) {
+		// 		builder.push(`${key}=${[key]}`);
+		// 	}
+		// }
+		const qString1 = queryString.stringify(queryObject)
+		const qString = `?${qString1}`;
 		return (qString.length <= 1) ? '' : qString;
 	}
 

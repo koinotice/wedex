@@ -1,10 +1,10 @@
 import * as Model from '../../Model';
-import { DataKeyValues } from '../../Enum/DataKeys';
-import { Observable } from 'rxjs/Observable';
-import { TransportManager } from '../../Helpers/TransportManager';
-import { HttpMethod } from '../../Enum/HttpMethod';
-import { WithdrawalStatusValue } from '../../Enum/WithdrawalStatusValue';
-import { IWallet } from '../../Interfaces/IWallet';
+import {DataKeyValues} from '../../Enum/DataKeys';
+import {Observable} from 'rxjs/Observable';
+import {TransportManager} from '../../Helpers/TransportManager';
+import {HttpMethod} from '../../Enum/HttpMethod';
+import {WithdrawalStatusValue} from '../../Enum/WithdrawalStatusValue';
+import {IWallet} from '../../Interfaces/IWallet';
 import Validate from '../../Helpers/Validator';
 
 export class WalletAPI implements IWallet {
@@ -18,8 +18,9 @@ export class WalletAPI implements IWallet {
 		this.baseEndPoint = `${this.baseUrl}${this.apiVersion}`;
 	}
 
-	public getWalletBalances(): Observable<Model.Balance[]> {
-		return this.transportManager.privateRequest(HttpMethod.GET, `${this.baseEndPoint}/balances`)
+	// @ts-ignore
+	public getWalletBalances(params): Observable<Model.Balance[]> {
+		return this.transportManager.privateRequest(HttpMethod.GET, `${this.baseEndPoint}/user/balances`, params)
 			.map(data => this.transportManager.processResponse(data, Model.Balance, DataKeyValues.Balances))
 			.catch(this.catchErrorHandler);
 	}

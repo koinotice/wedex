@@ -1,27 +1,19 @@
-import { JsonObject, JsonProperty } from 'json2typescript';
-import { BigNumberConverter } from '../../../Converter/BigNumberConverter';
-import { BigNumber } from 'bignumber.js';
+import {JsonObject, JsonProperty} from 'json2typescript';
+import {BigNumberConverter} from '../../../Converter/BigNumberConverter';
+import {BigNumber} from 'bignumber.js';
 
 @JsonObject
 export class Balance {
-	@JsonProperty('currency', String)
-	public Currency: string = undefined;
+	@JsonProperty('accountId', Number)
+	public Currency: number = undefined;
 
-	@JsonProperty('type', String)
-	public Type: string = undefined;
+	@JsonProperty('tokenId', Number)
+	public tokenId: number = undefined;
 
-	@JsonProperty('total', BigNumberConverter)
-	public Total: BigNumber = undefined;
+	@JsonProperty('totalAmount', BigNumberConverter)
+	public totalAmount: BigNumber = undefined;
 
-	@JsonProperty('on_order', BigNumberConverter)
-	public OnOrder: BigNumber = undefined;
+	@JsonProperty('frozenAmount', BigNumberConverter)
+	public frozenAmount: BigNumber = undefined;
 
-	@JsonProperty('locked', Boolean)
-	public Locked: boolean = undefined;
-
-	@JsonProperty('usd_value', BigNumberConverter)
-	public UsdValue: BigNumber = undefined;
-
-	@JsonProperty('btc_value', BigNumberConverter)
-	public BtcValue: BigNumber = undefined;
 }

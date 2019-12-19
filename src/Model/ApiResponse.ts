@@ -8,5 +8,6 @@ export class ApiResponse {
 	public data: any;
 	public error: any;
 	public account: any;
+	public accountId: any;
 
 }
