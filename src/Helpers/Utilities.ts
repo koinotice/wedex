@@ -1,4 +1,6 @@
-import queryString from 'qs';
+// tslint:disable-next-line:no-var-requires
+const qs = require('qs')
+
 export class Utilities {
 	public static removeUndefined(obj: any) {
 		const res: object = (Object).assign({}, obj);
@@ -22,7 +24,7 @@ export class Utilities {
 		// 		builder.push(`${key}=${[key]}`);
 		// 	}
 		// }
-		const qString1 = queryString.stringify(queryObject)
+		const qString1 = qs.stringify(queryObject);
 		const qString = `?${qString1}`;
 		return (qString.length <= 1) ? '' : qString;
 	}

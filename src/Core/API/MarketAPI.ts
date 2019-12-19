@@ -43,8 +43,8 @@ export class MarketAPI implements IMarket {
 			.catch(this.catchErrorHandler);
 	}
 
-	public getTicker(market: string): Observable<Model.Ticker> {
-		return this.transportManager.publicRequest(HttpMethod.GET, `${this.baseEndPoint}/tickers/${Validate.market(market)}`)
+	public getTicker(params: any): Observable<Model.Ticker> {
+		return this.transportManager.publicRequest(HttpMethod.GET, `${this.baseEndPoint}/ticker`, params)
 			.map(data => this.transportManager.processResponse(data, Model.Ticker, DataKeyValues.Ticker))
 			.catch(this.catchErrorHandler);
 	}

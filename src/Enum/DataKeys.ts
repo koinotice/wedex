@@ -3,7 +3,7 @@ export enum DataKeyValues {
 	Currencies = 'currencies',
 	TradingPairs = 'trading_pairs',
 	Orderbook = 'depth',
-	Ticker = 'ticker',
+	Ticker = 'tickers',
 	Trades = 'trades',
 	Candles = 'candles',
 	Balances = 'balances',

@@ -61,11 +61,11 @@ export class TransportManager {
 		requestObject = Utilities.removeUndefined({
 			...requestOptions,
 		});
-		requestObject = Object.assign({accountId: this.config.account.accountId}, requestObject)
+		requestObject = Object.assign({accountId: this.config.account.accountId}, requestObject);
 
 		if (httpMethod === HttpMethod.POST || httpMethod === HttpMethod.PUT || httpMethod === HttpMethod.DELETE) {
 			const body = requestObject;
-			opts.headers['Content-Type'] = 'application/json'
+			opts.headers['Content-Type'] = 'application/json';
 			opts = Object.assign({body: JSON.stringify(body)}, opts);
 
 		}
@@ -95,10 +95,9 @@ export class TransportManager {
 		if (res.error) {
 			throw res.error;
 		}
-		//console.log(res)
+		console.log(res)
 		if (res.resultInfo) {
-
-			if (res.resultInfo.code == 0) {
+			if (res.resultInfo.code === 0) {
 				let result = (dataKey) ? res[dataKey] : res;
 				result = (result) ? result : res;
 
@@ -117,7 +116,5 @@ export class TransportManager {
 		} else {
 			throw res;
 		}
-
-
 	}
 }
