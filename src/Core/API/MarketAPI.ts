@@ -31,7 +31,7 @@ export class MarketAPI implements IMarket {
 
 	public getOrderBook(market: string, level: number = 0, limit: number = 10): Observable<Model.Orderbook> {
 		return this.transportManager.publicRequest(
-			HttpMethod.GET, `${this.baseEndPoint}/depth`, Validate.queryObject({market, level, limit}))
+			HttpMethod.POST, `${this.baseEndPoint}/depth`, Validate.queryObject({market, level, limit}))
 			.map(data => this.transportManager.processResponse(data, Model.Orderbook, DataKeyValues.Orderbook))
 			.catch(this.catchErrorHandler);
 	}

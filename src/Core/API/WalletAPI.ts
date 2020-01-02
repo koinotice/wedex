@@ -20,7 +20,7 @@ export class WalletAPI implements IWallet {
 
 	// @ts-ignore
 	public getWalletBalances(params): Observable<Model.Balance[]> {
-		return this.transportManager.privateRequest(HttpMethod.GET, `${this.baseEndPoint}/user/balances`, params)
+		return this.transportManager.privateRequest(HttpMethod.POST, `${this.baseEndPoint}/user/balances`, params)
 			.map(data => this.transportManager.processResponse(data, Model.Balance, DataKeyValues.Balances))
 			.catch(this.catchErrorHandler);
 	}

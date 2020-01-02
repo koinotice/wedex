@@ -20,7 +20,7 @@ export class WedexClient implements IWedexClient {
 	private config: DefaultSettings;
 	private readonly defaults: DefaultSettings = {
 		account: null,
-		baseUrl: 'http://13.112.139.43:31610/api/',
+		baseUrl: 'http://a0fd6fca82acb11eab4630687db0f713-923437896.ap-northeast-1.elb.amazonaws.com/api/',
 		apiVersion: 'v1',
 		logType: LogTypeValue.None,
 		logWriter: null

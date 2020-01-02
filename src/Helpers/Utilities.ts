@@ -1,6 +1,5 @@
 // tslint:disable-next-line:no-var-requires
-const qs = require('qs')
-
+const qs = require('qs');
 export class Utilities {
 	public static removeUndefined(obj: any) {
 		const res: object = (Object).assign({}, obj);

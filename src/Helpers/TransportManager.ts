@@ -95,7 +95,7 @@ export class TransportManager {
 		if (res.error) {
 			throw res.error;
 		}
-		console.log(res)
+		// console.log(res)
 		if (res.resultInfo) {
 			if (res.resultInfo.code === 0) {
 				let result = (dataKey) ? res[dataKey] : res;

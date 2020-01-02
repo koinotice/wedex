@@ -31,7 +31,7 @@ export class TradeAPI implements ITrade {
 	}
 
 	public getAllOrder(params?: any): Observable<Model.AllOrder[]> {
-		return this.transportManager.privateRequest(HttpMethod.GET, `${this.baseEndPoint}/orders`, params)
+		return this.transportManager.privateRequest(HttpMethod.POST, `${this.baseEndPoint}/orders`, params)
 			.map(data => this.transportManager.processResponse(data, Model.AllOrder, DataKeyValues.Orders))
 			.catch(this.catchErrorHandler);
 	}
@@ -64,7 +64,7 @@ export class TradeAPI implements ITrade {
 	}
 
 	public cancelOrder(params: any): Observable<boolean> {
-		return this.transportManager.privateRequest(HttpMethod.DELETE, `${this.baseEndPoint}/orders`, params, true, true)
+		return this.transportManager.privateRequest(HttpMethod.POST, `${this.baseEndPoint}/orders`, params, true, true)
 			.map(data => this.transportManager.processResponse(data))
 			.catch(this.catchErrorHandler);
 	}
