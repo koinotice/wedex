@@ -64,7 +64,7 @@ export class TradeAPI implements ITrade {
 	}
 
 	public cancelOrder(params: any): Observable<boolean> {
-		return this.transportManager.privateRequest(HttpMethod.POST, `${this.baseEndPoint}/orders`, params, true, true)
+		return this.transportManager.privateRequest(HttpMethod.POST, `${this.baseEndPoint}/deleteOrders`, params, true, true)
 			.map(data => this.transportManager.processResponse(data))
 			.catch(this.catchErrorHandler);
 	}
