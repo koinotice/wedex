@@ -48,6 +48,5 @@ export class AllOrder {
 	@JsonProperty('validSince', DateTimeConverter)
 	public ValidUntil: Date = undefined;
 
-	@JsonProperty('timestamp', DateTimeConverter)
-	public Timestamp: Date = undefined;
+
 }

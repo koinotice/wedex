@@ -78,7 +78,7 @@ export class TransportManager {
 			}
 		}
 		if (signed) {
-			const signature = this.config.account.publicKeyX + ',' + this.config.account.publicKeyY + ',' + this.config.account.secret;
+			const signature = this.config.account.publicKeyX + ',' + this.config.account.publicKeyY + ',' + this.config.account.privateKey;
 
 			opts.headers['X-API-SIG'] = signature;
 		}
